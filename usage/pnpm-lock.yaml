@@ -1,0 +1,47 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      replicate:
+        specifier: file:../replicate
+        version: file:../replicate
+    devDependencies:
+      meta.llama2:
+        specifier: file:../meta.llama2
+        version: file:../meta.llama2(replicate@file:../replicate)
+      openai.gpt4_5:
+        specifier: file:../openai.gpt4_5
+        version: file:../openai.gpt4_5(replicate@file:../replicate)
+
+packages:
+
+  meta.llama2@file:../meta.llama2:
+    resolution: {directory: ../meta.llama2, type: directory}
+    peerDependencies:
+      replicate: file:../replicate
+
+  openai.gpt4_5@file:../openai.gpt4_5:
+    resolution: {directory: ../openai.gpt4_5, type: directory}
+    peerDependencies:
+      replicate: file:../replicate
+
+  replicate@file:../replicate:
+    resolution: {directory: ../replicate, type: directory}
+
+snapshots:
+
+  meta.llama2@file:../meta.llama2(replicate@file:../replicate):
+    dependencies:
+      replicate: file:../replicate
+
+  openai.gpt4_5@file:../openai.gpt4_5(replicate@file:../replicate):
+    dependencies:
+      replicate: file:../replicate
+
+  replicate@file:../replicate: {}
