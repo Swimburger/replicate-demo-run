@@ -12,25 +12,25 @@ importers:
         specifier: file:../replicate
         version: file:../replicate
     devDependencies:
+      '@replicate/models.deepseek.v3':
+        specifier: file:../deepseek.v3
+        version: file:../deepseek.v3(replicate@file:../replicate)
       '@replicate/models.meta.llama2':
         specifier: file:../meta.llama2
         version: file:../meta.llama2(replicate@file:../replicate)
-      '@replicate/models.openai.gpt4_5':
-        specifier: file:../openai.gpt4_5
-        version: file:../openai.gpt4_5(replicate@file:../replicate)
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
 
 packages:
 
-  '@replicate/models.meta.llama2@file:../meta.llama2':
-    resolution: {directory: ../meta.llama2, type: directory}
+  '@replicate/models.deepseek.v3@file:../deepseek.v3':
+    resolution: {directory: ../deepseek.v3, type: directory}
     peerDependencies:
       replicate: file:../replicate
 
-  '@replicate/models.openai.gpt4_5@file:../openai.gpt4_5':
-    resolution: {directory: ../openai.gpt4_5, type: directory}
+  '@replicate/models.meta.llama2@file:../meta.llama2':
+    resolution: {directory: ../meta.llama2, type: directory}
     peerDependencies:
       replicate: file:../replicate
 
@@ -44,11 +44,11 @@ packages:
 
 snapshots:
 
-  '@replicate/models.meta.llama2@file:../meta.llama2(replicate@file:../replicate)':
+  '@replicate/models.deepseek.v3@file:../deepseek.v3(replicate@file:../replicate)':
     dependencies:
       replicate: file:../replicate
 
-  '@replicate/models.openai.gpt4_5@file:../openai.gpt4_5(replicate@file:../replicate)':
+  '@replicate/models.meta.llama2@file:../meta.llama2(replicate@file:../replicate)':
     dependencies:
       replicate: file:../replicate
 

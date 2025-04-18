@@ -6,7 +6,7 @@ This project demonstrates how to use TypeScript's module augmentation feature to
 
 - `replicate/`: Contains the base package with the generic `run` function
 - `meta.llama2/`: Package providing type definitions for Meta's Llama 2 model
-- `openai.gpt4_5/`: Package providing type definitions for OpenAI's GPT-4.5 model
+- `deepseek.v3/`: Package providing type definitions for DeepSeek V3 model
 - `usage/`: Contains example usage of the type-augmented models
 
 ## How It Works
@@ -15,7 +15,7 @@ This project demonstrates how to use TypeScript's module augmentation feature to
    - `BaseConfig` for input configuration
    - `BaseResult` for the output structure
 
-2. Model-specific packages (like `meta.llama2` and `openai.gpt4_5`) use TypeScript's module augmentation to add their own type overloads to the `run` function. This provides:
+2. Model-specific packages (like `meta.llama2` and `deepseek.v3`) use TypeScript's module augmentation to add their own type overloads to the `run` function. This provides:
    - Type-safe model names
    - Model-specific input parameters
    - Properly typed output results
@@ -33,7 +33,7 @@ This project demonstrates how to use TypeScript's module augmentation feature to
 
    This script will:
    - Install and build the base `replicate` package
-   - Install and build the model-specific packages (`meta.llama2` and `openai.gpt4_5`)
+   - Install and build the model-specific packages (`meta.llama2` and `deepseek.v3`)
    - Install and build the usage examples
 
 3. Once setup is complete, you can proceed to the "Try It Out" section below.

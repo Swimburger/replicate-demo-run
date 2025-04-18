@@ -14,7 +14,7 @@ pnpm install
 pnpm build
 popd
 
-pushd openai.gpt4_5
+pushd deepseek.v3
 pnpm install
 pnpm build
 popd

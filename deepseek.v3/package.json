@@ -1,5 +1,5 @@
 {
-  "name": "@replicate/models.openai.gpt4_5",
+  "name": "@replicate/models.deepseek.v3",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

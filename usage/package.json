@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@replicate/models.meta.llama2": "file:../meta.llama2",
-    "@replicate/models.openai.gpt4_5": "file:../openai.gpt4_5",
+    "@replicate/models.deepseek.v3": "file:../deepseek.v3",
     "typescript": "~5.8.3"
   }
 }
