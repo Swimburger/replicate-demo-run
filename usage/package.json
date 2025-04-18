@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "@replicate/models.meta.llama2": "file:../meta.llama2",
-    "@replicate/models.openai.gpt4_5": "file:../openai.gpt4_5"
+    "@replicate/models.openai.gpt4_5": "file:../openai.gpt4_5",
+    "typescript": "~5.8.3"
   }
 }

@@ -1,20 +1,23 @@
-import type { BaseConfig, BaseResult } from 'replicate';
+import type { BaseModelRunRequest, BaseRunResponse } from "replicate";
 
-export interface Llama2Config extends BaseConfig {
-    model: "meta/llama-2-70b";
-    input: {
-        prompt: string;
-        system_prompt?: string;
-        temperature?: number;
-        max_tokens?: number;
-        top_p?: number;
-    };
+export const ORGANIZATION = "meta";
+export const MODEL = "llama-2";
+export type Organization = "meta";
+export type Model = "llama-2";
+
+export interface Llama2Input {
+  prompt: string;
+  system_prompt?: string;
+  temperature?: number;
+  max_tokens?: number;
+  top_p?: number;
 }
 
-export interface Llama2Result extends BaseResult {
-    output: string;
-}
+export interface Llama2Request
+  extends BaseModelRunRequest<Organization, Model, Llama2Input> {}
 
-declare module 'replicate' {
-    export function run(config: Llama2Config): Promise<Llama2Result>;
+export interface Llama2Response extends BaseRunResponse<string> {}
+
+declare module "replicate" {
+  export function run(config: Llama2Request): Promise<Llama2Response>;
 }
