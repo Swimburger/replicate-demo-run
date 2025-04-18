@@ -1,4 +1,4 @@
-# TypeScript Type Augmentation Demo for Replicate Models
+# Dynamic typing for Replicate models
 
 This project demonstrates how to use TypeScript's module augmentation feature to provide model-specific type safety for different AI models in the Replicate ecosystem. It shows how separate packages can extend the base `run` function's type definition to provide precise typing for their specific model parameters and outputs.
 
