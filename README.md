@@ -1,6 +1,6 @@
 # Dynamic typing for Replicate models
 
-This project demonstrates how to use TypeScript's module augmentation feature to provide model-specific type safety for different AI models in the Replicate ecosystem. It shows how separate packages can extend the base `run` function's type definition to provide precise typing for their specific model parameters and outputs.
+This project demonstrates how to use [TypeScript's module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) feature to provide model-specific type safety for different AI models in the Replicate ecosystem. It shows how separate packages can extend the base `run` function's type definition to provide precise typing for their specific model parameters and outputs.
 
 ## Project Structure
 
@@ -20,7 +20,7 @@ This project demonstrates how to use TypeScript's module augmentation feature to
    - Model-specific input parameters
    - Properly typed output results
 
-3. When importing a model package, its type definitions are automatically added to the `run` function, providing autocomplete and type checking for that specific model.
+3. When importing a model package, its type definitions are automatically added to the `run` function using TypeScript's [`declare module`](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) syntax. This enables compile-time type checking and autocomplete for that specific model's parameters and return types.
 
 ## Setup
 
@@ -45,6 +45,10 @@ Look at the example usage in `usage/src/example.ts`. You'll notice that TypeScri
 - Type checking for input parameters
 - Proper return type inference
 
+<a href="./files/intellisense.png">
+   <img src="./files/intellisense.png" alt="IntelliSense" width="500"/>
+</a>
+
 Additionally, if a user explicitly imports the request type from the model package, they create a variable that is typed as the model's request type. This allows for even more precise type checking and autocomplete features.
 
 ## Benefits
@@ -53,7 +57,3 @@ Additionally, if a user explicitly imports the request type from the model packa
 - **Better Developer Experience**: Get autocomplete for model-specific parameters
 - **Modular Design**: Each model can live in its own package while extending the base functionality
 - **Zero Runtime Overhead**: All type augmentation happens at compile time
-
-## Technical Details
-
-The type augmentation is achieved using TypeScript's `declare module` syntax. Each model package extends the base `replicate` module by adding its specific type overload to the `run` function. This allows TypeScript to properly type-check the function calls based on the model being used.
