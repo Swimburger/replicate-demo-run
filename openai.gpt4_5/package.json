@@ -1,5 +1,5 @@
 {
-  "name": "openai.gpt4_5",
+  "name": "@replicate/models.openai.gpt4_5",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

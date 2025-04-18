@@ -13,7 +13,7 @@
     "replicate": "file:../replicate"
   },
   "devDependencies": {
-    "meta.llama2": "file:../meta.llama2",
-    "openai.gpt4_5": "file:../openai.gpt4_5"
+    "@replicate/models.meta.llama2": "file:../meta.llama2",
+    "@replicate/models.openai.gpt4_5": "file:../openai.gpt4_5"
   }
 }

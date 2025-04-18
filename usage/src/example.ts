@@ -1,6 +1,6 @@
 import { run } from 'replicate';
-import 'meta.llama2';
-import 'openai.gpt4_5';
+import '@replicate/models.meta.llama2';
+import '@replicate/models.openai.gpt4_5';
 
 async function example() {
     // Using Llama2 with its specific types

@@ -1,5 +1,5 @@
 {
-  "name": "meta.llama2",
+  "name": "@replicate/models.meta.llama2",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
